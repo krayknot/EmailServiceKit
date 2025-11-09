@@ -1,0 +1,15 @@
+﻿CREATE TABLE IF NOT EXISTS EmailQueue (
+  Id INTEGER PRIMARY KEY AUTOINCREMENT,
+  FromAddress TEXT NOT NULL,
+  ToAddress TEXT NOT NULL,
+  Cc TEXT,
+  Bcc TEXT,
+  Subject TEXT,
+  Body TEXT,
+  IsHtml INTEGER,
+  CreatedAt TEXT,
+  SendAt TEXT,
+  AttemptCount INTEGER DEFAULT 0,
+  Status INTEGER DEFAULT 0,
+  LastError TEXT
+);
